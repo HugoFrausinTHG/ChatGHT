@@ -1,9 +1,9 @@
 package com.thg.accelerator23.connectn.MaxMinImplementation;
 
-import com.thehutgroup.accelerator.connectn.AI.Analisys.boardAnalyser;
-import com.thehutgroup.accelerator.connectn.AI.BooleanInt.BooleanInt;
 import com.thehutgroup.accelerator.connectn.player.Board;
 import com.thehutgroup.accelerator.connectn.player.Counter;
+import com.thg.accelerator23.connectn.BooleanInt.BooleanInt;
+import com.thg.accelerator23.connectn.Analysis.boardAnalyser;
 
 import java.util.Arrays;
 
