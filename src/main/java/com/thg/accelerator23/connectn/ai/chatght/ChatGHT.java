@@ -31,6 +31,26 @@ public class ChatGHT extends Player {
       int[] columns = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
       int[] allowedColumns = Arrays.stream(columns).filter(column-> analyser.doesColumnHaveSpace(board,column).getaBoolean()).toArray();
       int randomIndex = (int)(Math.random()*allowedColumns.length);
+        String[] comments = {
+                "No thoughts, just vibes",
+                "All chill, no spill",
+                "Tranquility on repeat",
+                "Taking it slow, enjoying the flow",
+                "Brain off, bliss on",
+                "Mind at ease, heart at peace",
+                "Coasting on cloud nine",
+                "Drifting in the breeze",
+                "Gentle waves, endless days",
+                "No rush, just hush",
+                "Peaceful mind, happy soul",
+                "Sunshine and slow time",
+                "Watch the clouds, let worries go",
+                "Floating like a daydream",
+                "Relax, release, recharge"
+        };
+      int randomIndex2 = (int)(Math.random()*comments.length);
+
+      System.out.println(comments[randomIndex2]);
       return allowedColumns[randomIndex];
     }
   }
