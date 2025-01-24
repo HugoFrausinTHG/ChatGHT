@@ -40,10 +40,8 @@ public class MaxMinImplementation {
             int childScore = checkDepthLevel(childNode);
             childNode.setScore(childScore);
             boardsCheckedMap.put(childNode.getBoardId(), childNode);
-            System.out.println("Move: " + allowedMoves[moveIndex] + " Score:" + childScore);
             optimalMove = (optimalMove[1] < childScore) ? new int[]{allowedMoves[moveIndex], childScore} : optimalMove;
         }
-        System.out.println("Chosen move: " + optimalMove[0] + " Score:" + optimalMove[1]);
 
         return optimalMove[0];
     }
@@ -62,7 +60,6 @@ public class MaxMinImplementation {
         boolean maxDepthTimeReached = System.currentTimeMillis() - startTimeMillis > maxDepthSearchTime;
         if (!maxDepthUpdated && maxDepthTimeReached) {
             updateMaxDepth(currentDepth);
-            System.out.println(node.getBoardId());
         }
         boolean timedOut = System.currentTimeMillis() - startTimeMillis > cutTimeMillis;
 
