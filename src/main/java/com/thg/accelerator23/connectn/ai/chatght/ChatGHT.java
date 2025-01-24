@@ -9,11 +9,10 @@ import com.thg.accelerator23.connectn.MaxMinImplementation.MaxMinImplementation;
 import java.util.Arrays;
 
 public class ChatGHT extends Player {
-    public boolean randomPlay;
-    public ChatGHT(Counter counter,boolean Random) {
+    public boolean randomPlay = false;
+    public ChatGHT(Counter counter) {
       //TODO: fill in your name here
       super(counter, ChatGHT.class.getName());
-      this.randomPlay = Random;
     }
 
     @Override

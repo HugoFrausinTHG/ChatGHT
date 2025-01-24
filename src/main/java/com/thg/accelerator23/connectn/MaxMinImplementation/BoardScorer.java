@@ -11,12 +11,10 @@ import java.util.Arrays;
 
 public class BoardScorer{
     public static int winBonus = 1000;
-    public static int loseBonus = -1000;
+    public static int loseBonus = -999;
     public static int centerBenefitBonus = 10;
-    public static int score(boardNode node,Counter counter){
-        BoardAnalyser analysis = new BoardAnalyser(node.getBoard().getConfig());
+    public static int score(boardNode node,Counter counter,GameState gameStatus){
         int score = 0;
-        GameState gameStatus = analysis.calculateGameState(node.getBoard());
         BooleanInt won = canWin(gameStatus,counter);
         if(won.getaBoolean()){
             score+=won.getAnInt();
@@ -31,15 +29,11 @@ public class BoardScorer{
         }
         return score;
     }
-    public static int getLastMove(String nodeId){
-        String lastMoveString = nodeId.substring(nodeId.length()-1);
-        return Integer.parseInt(lastMoveString);
-    }
     public static BooleanInt canWin(GameState gameState,Counter counter){
         return new BooleanInt(isWon(gameState,counter),winBonus);
     }
     public static boolean isWon(GameState gameState,Counter counter){
-        boolean won = gameState.getMaxInARowByCounter().get(counter) == 4;
+        boolean won = gameState.getWinner() == counter;
         return won;
     }
     public static BooleanInt canLose(GameState gameState, Counter counter){
