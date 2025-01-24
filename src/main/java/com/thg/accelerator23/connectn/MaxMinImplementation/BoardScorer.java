@@ -1,8 +1,7 @@
 package com.thg.accelerator23.connectn.MaxMinImplementation;
 
-import com.thehutgroup.accelerator.connectn.analysis.BoardAnalyser;
-import com.thehutgroup.accelerator.connectn.analysis.GameState;
-
+import com.thg.accelerator23.connectn.Analysis.BuiltInAnalysis.GameState;
+import com.thg.accelerator23.connectn.Analysis.BuiltInAnalysis.BoardAnalyser;
 import com.thehutgroup.accelerator.connectn.player.Board;
 import com.thehutgroup.accelerator.connectn.player.Counter;
 import com.thg.accelerator23.connectn.BooleanInt.BooleanInt;
