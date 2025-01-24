@@ -15,8 +15,10 @@ public class ChatGHT extends Player {
 
   @Override
   public int makeMove(Board board) {
-    System.out.println("I am going to ask Lewis' bot for help");
+    System.out.println("I am going to ask Lewis' bot for help...");
     Player betterBot = new AIvinson(myCounter);
-    return betterBot.makeMove(board);
+    int answer = betterBot.makeMove(board);
+    System.out.println("AIvinson, play: " + answer);
+    return answer;
   }
 }
